@@ -20,7 +20,7 @@
     function startGame() {
         event.preventDefault(); // CRITICAL FUNCTION
         // startGame() will do all required processes to start the game and will then proceed to the timer
-        window.location.href = base + "/timer";
+        window.location.href = base + "/detach";
     }
 </script>
 <style>
@@ -115,7 +115,9 @@
         <h2 class="rule"><div transition:fly={{duration:500, delay:3000}}><span class="player">Player 1</span> uses this computer; <span class="player">Player 2</span> will use the USB stick.</div></h2>
         <h2 class="rule"><div transition:fly={{duration:500, delay:5000}}><span class="player">Player 2</span> must attempt to insert the USB stick into the port of the computer, and will have 2 minutes to do so.</div></h2>
         <h2 class="rule"><div transition:fly={{duration:500, delay:8000}}><span class="player">Player 1</span> must attempt to either hide the computer from <span class="player">Player 2</span> or run away from <span class="player">Player 2</span> with the computer.</div></h2>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:11000}}><span class="player">Player 1</span> cannot try to cover the port to prevent <span class="player">Player 2</span> from winning. <span class="player">Player 1</span> can move the laptop itself into a position that inhibits access.</div></h2>
+
         <br>
-        <h3 id="playButton"><button onclick={() => {startGame();}} transition:slide={{duration:500, delay:11000}}>We understand the rules</button></h3>
+        <h3 id="playButton"><button onclick={() => {startGame();}} transition:slide={{duration:500, delay:13000}}>We understand the rules</button></h3>
     </div>
 {/if}
