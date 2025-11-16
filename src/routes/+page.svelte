@@ -88,11 +88,11 @@
 {/if}
 {#if toggle2}
     <div transition:fly={{y:2000, duration:1000}} id="overlayPanel">
-        <br><br>
-        <h1>RULES</h1>
+        <br><br><br><br>
+        <h1 style:font-weight=900>RULES</h1>
         <br><br>
         <h2 class="rule"><span transition:fly={{duration:500, delay:1000}}>Taggie is a hide and seek/tag game involving two players.</span></h2>
-        <h2 class="rule"><span transition:fly={{duration:500, delay:3000}}>One player uses this computer, the other will use the USB stick.</span></h2>
+        <h2 class="rule"><span transition:fly={{duration:500, delay:3000}}>Player 1 uses this computer; Player 2 will use the USB stick.</span></h2>
         <h2 class="rule"><span transition:fly={{duration:500, delay:5000}}>Player 2 must attempt to insert the USB stick into the port of the computer, and will have 2 minutes to do so.</span></h2>
         <br>
         <h2><button transition:slide={{duration:500, delay:8000}}>We understand the rules</button></h2>
