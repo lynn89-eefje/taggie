@@ -1,1 +1,0 @@
-import{f as r,a}from"../chunks/B7SK7Vhs.js";import{k as t,l as n}from"../chunks/0WOETBb_.js";t();var s=r("<h1>ERROR :(</h1> <h3>Don't worry, though; we've put our best pigeons on the job and will solve your issue soon!</h3>",1);function l(o){var e=s();n(2),a(o,e)}export{l as component};
