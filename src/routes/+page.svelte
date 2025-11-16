@@ -114,9 +114,7 @@
         <h2 class="rule"><div transition:fly={{duration:500, delay:3000}}><span class="player">Player 1</span> possesses this computer; <span class="player">Player 2</span> will attempt to find or take this computer.</div></h2>
         <h2 class="rule"><div transition:fly={{duration:500, delay:5000}}><span class="player">Player 2</span> must attempt to press the spacebar on the computer, and will have 2 minutes to do so.</div></h2>
         <h2 class="rule"><div transition:fly={{duration:500, delay:8000}}><span class="player">Player 1</span> must attempt to either hide the computer from <span class="player">Player 2</span> or run away from <span class="player">Player 2</span> with the computer.</div></h2>
-        <h2 class="rule"><div transition:fly={{duration:500, delay:11000}}><span class="player">Player 1</span> cannot try to cover the keyboard to prevent <span class="player">Player 2</span> from winning. <span class="player">Player 1</span> can move the laptop itself into a position that inhibits access.</div></h2>
-
-        <br>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:11000}}><span class="player">Player 1</span> cannot try to cover the keyboard or reload the page to prevent <span class="player">Player 2</span> from winning. <span class="player">Player 1</span> can move the laptop itself into a position that inhibits access.</div></h2>
         <h3 id="playButton"><button onclick={() => {startGame();}} transition:slide={{duration:500, delay:13000}}>We understand the rules</button></h3>
     </div>
 {/if}
