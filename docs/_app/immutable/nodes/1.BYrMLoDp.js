@@ -1,0 +1,1 @@
+import{f as t,a as e}from"../chunks/-rBFsAbh.js";import"../chunks/WuavLPnd.js";import{_ as a}from"../chunks/CH1Md8QF.js";var n=t("<h1>ERROR :(</h1> <h3>Don't worry, though; we've put our best cockatiels on the job and will solve your issue soon!</h3>",1);function p(o){var r=n();a(2),e(o,r)}export{p as component};

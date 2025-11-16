@@ -3,6 +3,8 @@
     import { onMount } from "svelte";
     import { base } from "$app/paths";
 
+    import Player2 from "$lib/player2.svelte";
+
     let phase = $state(0);
     let timer = $state(120);
     let timer2 = $state(7);
@@ -103,4 +105,5 @@
     <div id="timer" transition:slide>
         <h1 id="timer-title">{timer}</h1>
     </div>
+    <Player2/>
 {/if}
