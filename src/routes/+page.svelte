@@ -15,6 +15,12 @@
             toggle2 = true;
         }, 4500)
     })
+
+    function startGame() {
+        event.preventDefault(); // CRITICAL FUNCTION
+        // startGame() will do all required processes to start the game and will then proceed to the timer
+
+    }
 </script>
 <style>
     #title {
@@ -25,7 +31,7 @@
         -moz-user-select: none;
         -ms-user-select: none;
     }
-    h1, h2 {
+    h1, h2, h3 {
         text-align: center;
     }
     #player span {
@@ -51,19 +57,31 @@
         left: 0px;
         right: 0px;
         background-color: rgb(146, 74, 86);
+        background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 10px,rgba(0,0,0,0.03) 10px 20px);
     }
     .rule {
         text-align: center;
         margin-bottom: 40px;
-        span {
+        div {
             background-color: rgb(99, 44, 74);
             padding: 10px;
             border-radius: 20px;
+            max-width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            box-shadow: 0px 7px 5px rgb(54, 13, 41);
+
+            span.player {
+                color: rgb(255, 93, 188);
+            }
         }
+    }
+    #playButton {
+        font-size: 30px;
     }
 </style>
 {#if toggle}
-    <h1 transition:slide={{duration:1000}} id="title"><span style:color="rgb(255, 179, 217)">TAGGIE</span> ENABLED</h1>
+    <h1 transition:slide={{duration:1000}} id="title"><span style:color="rgb(255, 179, 217)">TAGGIE</span> THE GAME</h1>
     <br>
     <h2 transition:fly={{delay:500, y:200, duration:1000}} id="player"><span >Initializing Round</span></h2>
     <br>
@@ -90,11 +108,13 @@
     <div transition:fly={{y:2000, duration:1000}} id="overlayPanel">
         <br><br><br><br>
         <h1 style:font-weight=900>RULES</h1>
+        <h3>(Do not detach the USB Stick)</h3>
         <br><br>
-        <h2 class="rule"><span transition:fly={{duration:500, delay:1000}}>Taggie is a hide and seek/tag game involving two players.</span></h2>
-        <h2 class="rule"><span transition:fly={{duration:500, delay:3000}}>Player 1 uses this computer; Player 2 will use the USB stick.</span></h2>
-        <h2 class="rule"><span transition:fly={{duration:500, delay:5000}}>Player 2 must attempt to insert the USB stick into the port of the computer, and will have 2 minutes to do so.</span></h2>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:1000}}>Taggie is a hide and seek/tag game involving two players.</div></h2>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:3000}}><span class="player">Player 1</span> uses this computer; <span class="player">Player 2</span> will use the USB stick.</div></h2>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:5000}}><span class="player">Player 2</span> must attempt to insert the USB stick into the port of the computer, and will have 2 minutes to do so.</div></h2>
+        <h2 class="rule"><div transition:fly={{duration:500, delay:8000}}><span class="player">Player 1</span> must attempt to either hide the computer from <span class="player">Player 2</span> or run away from <span class="player">Player 2</span> with the computer.</div></h2>
         <br>
-        <h2><button transition:slide={{duration:500, delay:8000}}>We understand the rules</button></h2>
+        <h3 id="playButton"><button onclick={() => {startGame();}} transition:slide={{duration:500, delay:11000}}>We understand the rules</button></h3>
     </div>
 {/if}
