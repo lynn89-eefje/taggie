@@ -1,6 +1,7 @@
 <script>
     import { draw, fly, slide } from "svelte/transition"; 
     import { onMount } from "svelte";
+    import { base } from "$app/paths";
 
     let toggle = $state(false);
     let toggle2 = $state(false);
@@ -19,7 +20,7 @@
     function startGame() {
         event.preventDefault(); // CRITICAL FUNCTION
         // startGame() will do all required processes to start the game and will then proceed to the timer
-
+        window.location.href = base + "/timer";
     }
 </script>
 <style>
