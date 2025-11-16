@@ -4,13 +4,14 @@ node_modules
 .output
 .vercel
 .netlify
-.wrangler
+.wrang
 /.svelte-kit
 /build
 
 # OS
 .DS_Store
 Thumbs.db
+.idea/
 
 # Env
 .env
